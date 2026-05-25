@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Habit Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1 class="header__title">Habit Tracker</h1>
+        <p class="header__subtitle">Build streaks, one day at a time</p>
+      </header>
+
+      <main class="main">
+        <section class="add next habit" aria-label="Add a new habit">
+          <div class="add-habit__form">
+            <input
+              type="text"
+              id="habit-input"
+              class="add-habit__input"
+              placeholder="Enter a new habit…"
+              aria-label="New habit name"
+              maxlength="80"
+              autocomplete="off"
+            />
+            <button id="add-btn" class="btn btn--primary" aria-label="Add habit">
+              Add
+            </button>
+          </div>
+        </section>
+
+        <section
+          class="progress"
+          id="progress-section"
+          aria-label="here is the Progress summary"
+          hidden
+        >
+          <div
+            class="progress__bar-wrap"
+            role="progressbar"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+            id="progress-bar-wrap"
+          >
+            <div class="progress__bar" id="progress-bar"></div>
+          </div>
+          <p class="progress__label" id="progress-label">0 / 0 completed</p>
+        </section>
+
+        <section class="habits" aria-label="Habit list">
+          <ul class="habit-list" id="habit-list" aria-live="polite"></ul>
+
+          <div class="empty-state" id="empty-state">
+            <div class="empty-state__icon" aria-hidden="true">
+              <svg width="56" height="56" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="32" r="26" stroke="currentColor" stroke-width="2.5" stroke-dasharray="6 4" />
+                <path d="M22 32l7 7 13-14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <p class="empty-state__text">No habits yet.<br />Add one above to get started!</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
