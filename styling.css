@@ -1,4 +1,4 @@
-/* ─── Reset & Base ─────────────────────────────────────────── */
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +6,7 @@
 }
 
 :root {
-  /* Colors */
+  
   --color-bg:          #f5f7fa;
   --color-surface:     #ffffff;
   --color-border:      #e2e8f0;
@@ -23,7 +23,7 @@
   --color-danger-bg:   #fee2e2;
   --color-focus:       #3b82f6;
 
-  /* Typography */
+  
   --font:              'Inter', system-ui, -apple-system, sans-serif;
   --text-sm:           0.875rem;
   --text-base:         1rem;
@@ -31,7 +31,7 @@
   --text-xl:           1.5rem;
   --text-2xl:          2rem;
 
-  /* Spacing (8px grid) */
+ 
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
@@ -39,7 +39,7 @@
   --space-5: 40px;
   --space-6: 48px;
 
-  /* Misc */
+
   --radius-sm:  6px;
   --radius-md:  10px;
   --radius-lg:  16px;
@@ -61,14 +61,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ─── Focus Visible ────────────────────────────────────────── */
+
 :focus-visible {
   outline: 2.5px solid var(--color-focus);
   outline-offset: 3px;
   border-radius: var(--radius-sm);
 }
 
-/* ─── App Layout ───────────────────────────────────────────── */
+
 .app {
   max-width: 680px;
   margin: 0 auto;
@@ -79,7 +79,7 @@ body {
   gap: var(--space-4);
 }
 
-/* ─── Header ───────────────────────────────────────────────── */
+
 .header {
   text-align: center;
   padding: var(--space-5) var(--space-2) var(--space-2);
@@ -99,7 +99,7 @@ body {
   font-size: var(--text-sm);
 }
 
-/* ─── Add Habit ────────────────────────────────────────────── */
+
 .add-habit__form {
   display: flex;
   gap: var(--space-1);
@@ -131,7 +131,7 @@ body {
   color: var(--color-text-muted);
 }
 
-/* ─── Buttons ──────────────────────────────────────────────── */
+
 .btn {
   font-family: var(--font);
   font-size: var(--text-sm);
@@ -173,7 +173,7 @@ body {
   color: var(--color-danger);
 }
 
-/* ─── Progress ─────────────────────────────────────────────── */
+
 .progress {
   display: flex;
   flex-direction: column;
@@ -206,7 +206,7 @@ body {
   text-align: right;
 }
 
-/* ─── Habit List ───────────────────────────────────────────── */
+
 .habit-list {
   list-style: none;
   display: flex;
@@ -214,7 +214,7 @@ body {
   gap: var(--space-1);
 }
 
-/* ─── Habit Item ───────────────────────────────────────────── */
+
 .habit-item {
   display: flex;
   align-items: center;
@@ -261,7 +261,7 @@ body {
   animation: fade-out 180ms ease forwards;
 }
 
-/* Checkbox */
+
 .habit-item__checkbox {
   appearance: none;
   -webkit-appearance: none;
@@ -297,7 +297,6 @@ body {
   transform: rotate(42deg) translate(0, -1px);
 }
 
-/* Label */
 .habit-item__label {
   flex: 1;
   font-size: var(--text-base);
@@ -312,7 +311,7 @@ body {
   text-decoration: line-through;
 }
 
-/* ─── Empty State ──────────────────────────────────────────── */
+
 .empty-state {
   display: flex;
   flex-direction: column;
@@ -336,7 +335,7 @@ body {
   line-height: 1.6;
 }
 
-/* ─── Responsive ───────────────────────────────────────────── */
+
 @media (max-width: 480px) {
   .app {
     padding: var(--space-3) var(--space-2);

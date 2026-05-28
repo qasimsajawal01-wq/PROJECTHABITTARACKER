@@ -9,7 +9,7 @@ const progressBar = document.getElementById('progress-bar');
 const progressBarWrap = document.getElementById('progress-bar-wrap');
 const progressLabel = document.getElementById('progress-label');
 
-// ─── Data ───────────────────────────────────────────────────
+
 
 function loadHabits() {
   try {
@@ -23,7 +23,7 @@ function saveHabits(habits) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(habits));
 }
 
-// ─── Render ─────────────────────────────────────────────────
+
 
 function render(habits) {
   habitList.innerHTML = '';
@@ -32,7 +32,7 @@ function render(habits) {
   const total = habits.length;
   const pct = total === 0 ? 0 : Math.round((completed / total) * 100);
 
-  // Progress section
+
   if (total === 0) {
     progressSection.hidden = true;
     emptyState.hidden = false;
@@ -44,7 +44,7 @@ function render(habits) {
     progressLabel.textContent = `${completed} / ${total} completed`;
   }
 
-  // Habit items
+ 
   habits.forEach(habit => {
     const li = document.createElement('li');
     li.className = 'habit-item' + (habit.done ? ' completed' : '');
@@ -83,7 +83,7 @@ function render(habits) {
   });
 }
 
-// ─── Actions ────────────────────────────────────────────────
+
 
 function addHabit() {
   const name = habitInput.value.trim();
@@ -116,7 +116,7 @@ function deleteHabit(id, li) {
   }, { once: true });
 }
 
-// ─── Events ─────────────────────────────────────────────────
+
 
 addBtn.addEventListener('click', addHabit);
 
@@ -124,6 +124,6 @@ habitInput.addEventListener('keydown', e => {
   if (e.key === 'Enter') addHabit();
 });
 
-// ─── Init ────────────────────────────────────────────────────
+
 
 render(loadHabits());
